@@ -60,3 +60,7 @@ SELECT MIN(qtd_filhos) FROM clientes;
 --Retorna o valor máximo de uma coluna
 SELECT MAX(qtd_filhos) FROM clientes;
 
+
+-- Agrupar colunas (por exemplo eu tenho a contagem de todos os sexos mas quero ter dividido por M e Fclientes
+SELECT Sexo, count(*) AS 'quantidade de clientes' FROM clientes GROUP BY Sexo;
+
