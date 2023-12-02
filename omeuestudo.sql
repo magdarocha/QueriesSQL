@@ -64,3 +64,18 @@ SELECT MAX(qtd_filhos) FROM clientes;
 -- Agrupar colunas (por exemplo eu tenho a contagem de todos os sexos mas quero ter dividido por M e F)
 SELECT Sexo, count(*) AS 'quantidade de clientes' FROM clientes GROUP BY Sexo;
 
+--Fazer uma consulta que tenha como resultado todas as colunas da tabela de pedidos e as colunas Loja, Gerente e telefone da tabela Lojas
+  --Tabela A -- Tabela Fato -- Tabela Pedidos
+  -- Tabela B (para complementar as infos da tabela A) -- Tabela Dimensão-- Tabela Lojas
+  -- Chave Primária -- ID_Loja
+  -- Chave estrangeira -- ID_Loja
+
+SELECT 
+  pedidos.*,
+  lojas.Loja,
+  lojas.Gerente,
+  lojas.Telefone
+FROM pedidos
+INNER JOIN lojas
+  ON pedidos.ID_Loja = lojas.ID_Loja;
+
