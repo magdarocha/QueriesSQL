@@ -61,6 +61,6 @@ SELECT MIN(qtd_filhos) FROM clientes;
 SELECT MAX(qtd_filhos) FROM clientes;
 
 
--- Agrupar colunas (por exemplo eu tenho a contagem de todos os sexos mas quero ter dividido por M e Fclientes
+-- Agrupar colunas (por exemplo eu tenho a contagem de todos os sexos mas quero ter dividido por M e F)
 SELECT Sexo, count(*) AS 'quantidade de clientes' FROM clientes GROUP BY Sexo;
 
