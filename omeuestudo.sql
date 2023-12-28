@@ -29,9 +29,12 @@ SELECT * FROM clientes where nome = "Ruben";
 SELECT * FROM clientes WHERE estado_civil = 'S' AND qtd_filhos = 4;
 
 SELECT * FROM clientes WHERE sexo = 'F' or estado_civil = 'C';
+-- Diferente pode ser != ou <> 
 
--- Diferente pode ser != ou <> , podemos usar o between 
-
+-- Operadores BETWEEN e IN
+-- No between pomos um intervalo, no in são os valores certos que queremos apresentar
+SELECT clientes WHERE qtd_filhos BETWEEN 1 AND 3;
+SELECT clientes WHERE qtd_filhos in (0,1,2);
 
 
 -- Contar a quantidade total de valores de uma coluna
