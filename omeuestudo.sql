@@ -30,6 +30,8 @@ SELECT * FROM clientes WHERE estado_civil = 'S' AND qtd_filhos = 4;
 
 SELECT * FROM clientes WHERE sexo = 'F' or estado_civil = 'C';
 
+-- Diferente pode ser != ou <> , podemos usar o between 
+
 
 
 -- Contar a quantidade total de valores de uma coluna
