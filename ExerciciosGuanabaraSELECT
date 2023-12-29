@@ -1,11 +1,39 @@
 SELECT * FROM gafanhotos
+
+--Uma lista com o nome de todas as gafanhotas
 --SELECT nome FROM gafanhotos WHERE sexo = 'F';
+
+--Lista com os dados de todos os que nasceram entre 1 jan 2000 e 31 dezembro 2015
 --SELECT nome FROM gafanhotos WHERE nascimento BETWEEN '2000-1-1' AND '2015-12-31';
+
+--Lista com os homens que são programadores
 --SELECT nome FROM gafanhotos WHERE sexo LIKE 'M' and profissao like 'programador';
+
+--Lista com os dados de todas as mulheres que nasceram no Brasil e que têm o nome iniciado com a letra J
 --SELECT nome  FROM gafanhotos WHERE nome LIKE 'J%' AND sexo LIKE 'F' AND nacionalidade LIKE 'Brasil'; 
+
+--Lista com o nome e nacionalidade de todos os homens que têm Silva no nome, não nasceram no Brasil e pesam menos de 100 kg
 --SELECT nome, nacionalidade FROM gafanhotos WHERE nome LIKE '%Silva%' AND sexo LIKE 'M' ANd peso < 100 AND nacionalidade not LIKE 'Brasil';
+
+-- Qual é a maior altura entre gafanhotos homens que moram no Brasil
 --SELECT MAX(altura) FROM gafanhotos where sexo LIKE 'M' and nacionalidade LIKE 'Brasil';
+
+--A média de peso dos gafanhotos
 --SELECT AVG(peso) FROM gafanhotos;
+
+--O menor peso entre os gafanhotos mulheres que nasceram fora do Brasil entre 1 janeiro 1990 e 31 dezembro 2000
 --SELECT MIN(peso) FROM gafanhotos WHERE sexo LIKE 'F' AND NOT nacionalidade LIKE 'Brasil' AND nascimento BETWEEN '1990-01-01' AND '2000-12-31';
+
+--Quantas gafanhotas têm mais de 1,90 m
 --SELECT count(nome) FROM gafanhotos WHERE sexo LIKE 'F' and altura > 1.90;
 
+
+--Lista com as profissões dos gafanhotos e respetivos quantitativos
+--SELECT  profissao, count (profissao) AS 'Contagem' FROM gafanhotos GROUP BY profissao;
+
+--Quantos gafanhotos homens e mulheres nasceram após 1 janeiro 2005
+--SELECT sexo, COUNT (nome) FROM gafanhotos where nascimento > '2005-01-01' GROUP BY sexo;
+
+--Lista agrupada pela altura dos gafanhotos, mostrando quantas pessoas pesam mais de 100kg e que estão acima da média de altura de todos os inscritos
+--SELECT avg(altura) FROM gafanhotos;
+SELECT COUNT (nome), altura FROM gafanhotos WHERE peso > 100 AND altura > (SELECT avg(altura) FROM gafanhotos) group by altura;
