@@ -1,1 +1,11 @@
+SELECT * FROM gafanhotos
+--SELECT nome FROM gafanhotos WHERE sexo = 'F';
+--SELECT nome FROM gafanhotos WHERE nascimento BETWEEN '2000-1-1' AND '2015-12-31';
+--SELECT nome FROM gafanhotos WHERE sexo LIKE 'M' and profissao like 'programador';
+--SELECT nome  FROM gafanhotos WHERE nome LIKE 'J%' AND sexo LIKE 'F' AND nacionalidade LIKE 'Brasil'; 
+--SELECT nome, nacionalidade FROM gafanhotos WHERE nome LIKE '%Silva%' AND sexo LIKE 'M' ANd peso < 100 AND nacionalidade not LIKE 'Brasil';
+--SELECT MAX(altura) FROM gafanhotos where sexo LIKE 'M' and nacionalidade LIKE 'Brasil';
+--SELECT AVG(peso) FROM gafanhotos;
+--SELECT MIN(peso) FROM gafanhotos WHERE sexo LIKE 'F' AND NOT nacionalidade LIKE 'Brasil' AND nascimento BETWEEN '1990-01-01' AND '2000-12-31';
+--SELECT count(nome) FROM gafanhotos WHERE sexo LIKE 'F' and altura > 1.90;
 
