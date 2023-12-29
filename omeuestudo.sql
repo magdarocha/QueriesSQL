@@ -102,3 +102,7 @@ FROM pedidos
 INNER JOIN lojas
   ON pedidos.ID_Loja = lojas.ID_Loja;
 
+-- O inner join só une os dados que tenham ligação entre eles. Pode ser escrito só JOIN
+
+-- OUTER JOIN Considera todos os parâmetros mesmo os que não têm ligação entre eles. Dependendo do que tabela queremos dar preferência pomos LEFT OUTER JOIN ou LEFT JOIN ou RIGHT OUTER JOIN / RIGHT JOIN
+
